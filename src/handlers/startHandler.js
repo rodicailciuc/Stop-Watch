@@ -11,7 +11,6 @@ import updateTime from '../utils/updateTime.js';
 const startHandler = () => {
     if (data.intervalId !== null) {
         clearInterval(data.intervalId);
-        data.intervalId = null;
     }
 
     data.intervalId = setInterval(() => {
