@@ -1,17 +1,19 @@
-# Image gallery
+# Stop Watch
 
-> A simple
+> A nice stop watch
 
 ## Table of contents
 
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+- [Stop Watch](#stop-watch)
+  - [Table of contents](#table-of-contents)
+  - [General info](#general-info)
+  - [Screenshots](#screenshots)
+  - [Technologies](#technologies)
+  - [Setup](#setup)
+  - [Code Examples](#code-examples)
+  - [Status](#status)
+  - [Inspiration](#inspiration)
+  - [Contact](#contact)
 
 ## General info
 
@@ -20,7 +22,7 @@
 
 ## Screenshots
 
-![Example screenshot]()
+![Example screenshot](./assets/Capture%20d’écran%202024-05-09%20205910.png)
 
 ## Technologies
 
@@ -36,21 +38,24 @@ clone the repo and start using the stop watch.
 ## Code Examples
 
 ```js
+const updateTimeDom = (timeDom, time) => {
+    timeDom.querySelector('.milliseconds').innerHtml = formatMilliseconds(
+        time.milliseconds,
+    );
 
+    if (time.seconds !== time.oldSeconds) {
+        timeDom.querySelector('.seconds').innerHtml = formatUnit(time.seconds);
+    }
+
+    if (time.minutes !== time.oldMinutes) {
+        timeDom.querySelector('.minutes').innerHtml = formatUnit(time.minutes);
+    }
+    time.oldMinutes = time.minutes;
+    time.oldSeconds = time.seconds;
+};
 ```
 
-## Features
 
-List of features ready and Todos for future development
-
--
--
--
-
-To-do list:
-
--
--
 
 ## Status
 

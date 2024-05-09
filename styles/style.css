@@ -28,7 +28,7 @@ body {
     border-radius: 12px;
 }
 
-.time {
+#time {
     color: #f8f8f8;
     padding: 1rem 0;
     font-size: 2rem;
