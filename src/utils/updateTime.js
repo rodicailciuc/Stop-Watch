@@ -20,6 +20,7 @@ const updateTime = (data) => {
     if (data.minutes === 60) {
         data.minutes = 0;
     }
+    return data;
 };
 
 export default updateTime;
